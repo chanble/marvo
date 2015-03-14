@@ -2,7 +2,7 @@
 Serve your local markdown files with zero configuration and CJK support.
 
 ## Screenshot
-![marvo](https://cloud.githubusercontent.com/assets/6262943/6650928/bc4c1502-ca66-11e4-8c5b-3339411c24a3.png)
+![marvo](https://cloud.githubusercontent.com/assets/6262943/6651063/c2ff1b96-ca6c-11e4-8849-3104f96f51c1.png)
 
 ## Installation
 ```bash
