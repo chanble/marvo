@@ -1,0 +1,24 @@
+.m-top-md {
+  margin-top: 10px;
+}
+
+.m-v-md {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+@mixin linear-gradient($position, $colors...) {
+  background-image: -o-linear-gradient($position, $colors);
+  background-image: -moz-linear-gradient($position, $colors);
+  background-image: -webkit-linear-gradient($position, $colors);
+  background-image: -ms-linear-gradient($position, $colors);
+  background-image: linear-gradient(to $position, $colors);
+}
+

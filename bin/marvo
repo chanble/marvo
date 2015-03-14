@@ -1,0 +1,86 @@
+#!/usr/bin/env node
+
+// The structure of this file is based on Harp.
+
+var path      = require("path")
+var commander = require("commander")
+var pkg       = require("../package.json")
+var app       = require("../")
+
+var print = function (msg) {
+  console.log("------------")
+  console.log("Marvo v" + pkg.version + " - Edward Chu")
+
+  if (msg) console.log(msg)
+
+  console.log("Press Ctl+C to stop the server")
+  console.log("------------")
+}
+
+commander
+  .version(pkg.version)
+
+commander
+  .command("serve [path]")
+  .option("-p, --port <port>", "Specify a port to listen on")
+  .description("Start a Markdown server in current or specified directory")
+  .action(function (projectPath, commander) {
+    projectPath = path.resolve(process.cwd(), projectPath || "")
+    var port = commander.port || 9000
+
+    app.serve(projectPath, { port: port }, function () {
+      var hostUrl = "http://localhost:" + port + "/"
+      print("Your server is listening at " + hostUrl)
+    })
+  })
+  .on('--help', function() {
+    console.log('  Examples:');
+    console.log();
+    console.log('    marvo serve -p 5566    # Serve at port 5566 (default: 9000)');
+    console.log('    marvo serve ./docs     # Serve files in ./docs');
+    console.log();
+  });
+
+// commander
+//   .command("compile [path] [outputPath]")
+//   .option("-o, --output <path>", "Specify the output directory for compiled assets (relative to project path)")
+//   .usage("compile your markdown files to static assets (HTML, JS and CSS).")
+//   .description("Compile project to static assets (HTML, JS and CSS)")
+//   .action(function (projectPath, outputPath, commander) {
+
+//     if(!commander){
+//       commander    = outputPath
+//       outputPath = null
+//     }
+
+//     projectPath = path.resolve(process.cwd(), projectPath || "")
+
+//     // We deal with output path 3 different ways
+//     // 1. second argument (relative to directory called in)
+//     // 2. `--output` argument (relative to project root)
+//     // 3. implicitly projectPath + "/www"
+
+//     if(outputPath){
+//       outputPath = path.resolve(process.cwd(), (outputPath || commander.output || ''))
+//     }else{
+//       outputPath = path.resolve(projectPath, (commander.output || "www"))
+//     }
+
+//     app.compile(projectPath, outputPath, function (errors, output) {
+//       if(errors) {
+//         console.log(JSON.stringify(errors, null, 2))
+//         process.exit(1)
+//       }
+//     })
+//   })
+
+commander.on("--help", function () {
+  console.log("  Use 'marvo <command> --help' to get more information or visit https://github.com/chuyik/marvo.")
+  console.log('')
+})
+
+commander.parse(process.argv)
+
+if(commander.args.length < 1){
+  commander.help()
+}

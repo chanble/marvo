@@ -1,0 +1,36 @@
+{
+  "name": "marvo",
+  "title": "Marvo (Markdown Server)",
+  "description": "Serve your local markdown files with zero configuration with CJK support.",
+  "homepage": "https://github.com/chuyik/marvo",
+  "author": "Edward Chu <crazyzyt@gmail.com> (https://github.com/chuyik)",
+  "keywords": ["markdown", "local", "static", "serve", "server", "md"],
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/marvo",
+    "test": "node test/"
+  },
+  "bin": {
+    "marvo": "./bin/marvo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chuyik/marvo.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sass": "^1.3.3"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "commander": "^2.7.1",
+    "express": "^4.12.2",
+    "highlight.js": "^8.4.0",
+    "jade": "^1.9.2",
+    "marked": "^0.3.3",
+    "q": "^1.2.0"
+  }
+}
+

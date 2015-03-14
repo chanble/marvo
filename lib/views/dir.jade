@@ -1,0 +1,30 @@
+extends ./_layout.jade
+
+block title
+  title #{path} - Marvo
+
+block content
+  div.nav-header
+    h1.title
+      if path !== '/'
+        i.glyphicon.glyphicon-chevron-left.back-btn
+          a(href="../") link
+        | #{dirName}
+      else
+        | Markdown Server
+    div.desc Current directory: #{dirPath}
+
+  div.page
+    div.list-group
+      for file in files
+        if file.isFile
+          a.list-group-item.file(href=file.name)
+            i.glyphicon.glyphicon-file
+            | #{file.name}
+        else
+          a.list-group-item.dir(href=file.name + '/')
+            i.glyphicon.glyphicon-folder-open
+            | #{file.name}
+
+      if (!files.length)
+        a.list-group-item.disabled No directories or markdown files

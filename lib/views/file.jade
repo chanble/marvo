@@ -1,0 +1,14 @@
+extends ./_layout.jade
+
+block title
+  title #{fileName} - Marvo
+
+block content
+  div.nav-header
+    div
+      i.glyphicon.glyphicon-chevron-left.back-btn
+        a(href="./") link
+      | #{fileName}
+
+  div.page
+    div!= html
