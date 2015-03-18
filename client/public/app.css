@@ -4927,6 +4927,16 @@ pre {
   padding: 10px 20px;
   border-radius: 5px; }
 
+blockquote {
+  border-left-width: 10px;
+  background-color: rgba(128, 128, 128, 0.05);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 15px 20px;
+  font-size: 98%; }
+  blockquote p {
+    letter-spacing: 1px; }
+
 p, pre, blockquote {
   margin: 0 0 1.1em; }
 
