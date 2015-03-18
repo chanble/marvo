@@ -4,9 +4,16 @@
   "description": "Serve your local markdown files with zero configuration with CJK support.",
   "homepage": "https://github.com/chuyik/marvo",
   "author": "Edward Chu <crazyzyt@gmail.com> (https://github.com/chuyik)",
-  "keywords": ["markdown", "local", "static", "serve", "server", "md"],
+  "keywords": [
+    "markdown",
+    "local",
+    "static",
+    "serve",
+    "server",
+    "md"
+  ],
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
     "start": "node bin/marvo",
@@ -33,4 +40,3 @@
     "q": "^1.2.0"
   }
 }
-
