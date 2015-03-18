@@ -24,10 +24,11 @@ pre {
   border-radius: 5px;
 }
 
-p, pre, pre.prettyprint, blockquote {
+p, pre, blockquote {
   margin: 0 0 1.1em;
 }
 
+// Styles of markdown
 .md-content {
 
   li {
@@ -66,5 +67,12 @@ p, pre, pre.prettyprint, blockquote {
   h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     font-weight: 300;
     line-height: 1.1;
+  }
+
+  table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-bordered;
+    @extend .table-hover;
   }
 }
