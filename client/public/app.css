@@ -1041,7 +1041,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive {
+.img-responsive, .md-content img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -1049,7 +1049,7 @@ img {
 .img-rounded {
   border-radius: 6px; }
 
-.img-thumbnail {
+.img-thumbnail, .md-content img {
   padding: 4px;
   line-height: 1.42857;
   background-color: #fff;
