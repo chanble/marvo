@@ -12,3 +12,8 @@ block content
   div.toc!=toc
   div.page
     div.md-content!= html
+  script(type='text/javascript').
+    setTimeout(function(){
+      var $ = function(s){return document.querySelector(s);};
+      $('div.toc').style.left = '-' + window.getComputedStyle($('div.toc')).width;
+    }, 500);

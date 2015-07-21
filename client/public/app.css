@@ -1,5 +1,6 @@
 @import url('fonts/source-code-pro/source-code-pro.css');
 @import url('fonts/source-code-pro/source-code-pro.css');
+@import url(./toc.css);
 .m-top-md {
   margin-top: 10px; }
 
