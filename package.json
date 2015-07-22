@@ -4,6 +4,13 @@
   "description": "Serve your local markdown files with zero configuration with CJK support.",
   "homepage": "https://github.com/chuyik/marvo",
   "author": "Edward Chu <crazyzyt@gmail.com> (https://github.com/chuyik)",
+  "contributors": [
+    {
+      "name": "chanble",
+      "email": "chanbo.cn@gmail.com",
+      "url": "https://github.com/chanble"
+    }
+  ],
   "keywords": [
     "markdown",
     "local",
