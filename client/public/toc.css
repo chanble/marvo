@@ -1,0 +1,20 @@
+.toc {
+  position: fixed;
+  font-size: 14px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  padding: 10px;
+  top: 10%;
+  left: -100%;
+  max-width: 340px;
+  transition: .3s; }
+  .toc:hover {
+    left: 0px !important; }
+  .toc > ul {
+    padding: 0px;
+    width: 100%; }
+  .toc .btn-default {
+    position: absolute;
+    right: -40px;
+    top: -1px;
+    border-radius: 0; }
