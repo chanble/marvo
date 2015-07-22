@@ -12,6 +12,7 @@ npm install -g marvo
 
 ## Quick Start
 ```bash
+cd /path/to/the/dir/of/your/mardown/files
 marvo serve
 ```
 Then everything works.
